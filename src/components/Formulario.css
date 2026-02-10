@@ -1,0 +1,19 @@
+/* Input válido */
+input:valid {
+  border-color: green;
+}
+
+/* Input inválido (solo después de interactuar) */
+input:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: red;
+}
+
+/* Campo requerido */
+input:required {
+  border-left: 3px solid orange;
+}
+
+/* Campo opcional */
+input:optional {
+  border-left: 3px solid lightgray;
+}
