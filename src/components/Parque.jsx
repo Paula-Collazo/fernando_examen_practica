@@ -1,23 +1,32 @@
 import { useParque } from "../hooks/useParque";
 import logo from '../assets/webp/logo.webp';
 import './Parque.css'
+import TarjetaNine from "./TarjetaNine";
 
 
 export default function Parque(){
 
-    const { ninesCasa, ninesParque, madarACasa, mandarAlParque} = useParque()
+    const { ninesCasa, ninesParque, mandarACasa, mandarAlParque} = useParque()
 
     return(
       <>
         <img src={logo} />
-        <div class="contadores-container">
+        <div className="contadores-container">
         <span>Nº de niñes en casa: </span>
-        <span class="contador-casa">{ninesCasa.length}</span>
+        <span className="contador-casa">{ninesCasa.length}</span>
         <span>Nº de niñes en el parque: </span>
-        <span class="contador-parque">{ninesParque.length}</span>
+        <span className="contador-parque">{ninesParque.length}</span>
         </div>
-        <div class="tarjetas-container"></div>
-        <button class="boton-parque" onClick={mandarAlParque}>¡Un niñe llega al parque!</button> 
+        <div className="tarjetas-container">
+            {ninesParque.map((nine , index) => (
+                <TarjetaNine
+                    key={index}
+                    nine={nine}
+                    mandarACasa={mandarACasa}
+                />
+            ))}
+        </div>
+        <button className="boton-parque" onClick={mandarAlParque}>¡Un niñe llega al parque!</button> 
       </>  
     )
 

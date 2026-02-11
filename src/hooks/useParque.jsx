@@ -23,11 +23,11 @@ export function useParque(){
         setNinesParque([...ninesParque, nineAleatorio])
     }
 
-    function madarACasa(nine){
+    function mandarACasa(nine){
         setNinesParque(ninesParque.filter(n => n.nombre !== nine.nombre))
         setNinesCasa([...ninesCasa, nine])
     }
     
-    return { ninesCasa, ninesParque, madarACasa, mandarAlParque}
+    return { ninesCasa, ninesParque, mandarACasa, mandarAlParque}
 }
 
