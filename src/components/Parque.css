@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "Fredoka";
+  src: url("../../fonts/Fredoka.ttf") format("truetype");
+  font-weight: 300 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-family: "Fredoka", sans-serif;
+  background: #ffd93d;
+  color: #2c3e50;
+  padding: 2rem;
+}
+
+.contadores-container {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.contador-casa,
+.contador-parque {
+  background: #ff6b6b;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.boton-parque {
+  font-family: "Fredoka", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.boton-parque:hover {
+  opacity: 0.9;
+}
+
+.cartas-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.tarjeta {
+  text-align: center;
+  cursor: pointer;
+}
+
+.tarjeta:hover {
+  opacity: 0.8;
+}
+
+.tarjeta img {
+  border-radius: 15px;
+  width: 12rem;
+  height: auto;
+  border: 3px solid #ff6b6b;
+}
+
+.tarjeta p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
